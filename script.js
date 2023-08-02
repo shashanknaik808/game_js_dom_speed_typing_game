@@ -45,3 +45,5 @@ function loadParagraph() {
     document.addEventListener("keydown", () => inpField.focus());
     typingText.addEventListener("click", () => inpField.focus());
 }
+
+loadParagraph();
