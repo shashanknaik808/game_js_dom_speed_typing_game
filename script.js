@@ -97,6 +97,18 @@ function initTimer() {
     }
 }
 
+function resetGame() {
+    loadParagraph();
+    clearInterval(timer);
+    timeLeft = maxTime;
+    charIndex = mistakes = isTyping = 0;
+    inpField.value = "";
+    timeTag.innerText = timeLeft;
+    wpmTag.innerText = 0;
+    mistakeTag.innerText = 0;
+    cpmTag.innerText = 0;
+}
 
 loadParagraph();
 inpField.addEventListener("input", initTyping);
+tryAgainBtn.addEventListener("click", resetGame);
